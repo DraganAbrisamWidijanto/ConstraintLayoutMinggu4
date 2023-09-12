@@ -14,7 +14,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-<!--Konten-->
+    <!--Konten-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_view">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main_view"
         android:layout_width="match_parent"
@@ -125,6 +133,7 @@
             android:id="@+id/pay_bill"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginTop="0dp"
             android:layout_marginEnd="16dp"
             android:background="#F4F9F4"
             android:orientation="vertical"
@@ -166,12 +175,14 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginBottom="136dp"
+            android:layout_marginTop="16dp"
             android:background="#FBEFC7"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/request_money">
+            app:layout_constraintTop_toBottomOf="@+id/request_money"
+            app:layout_constraintVertical_bias="1.0">
 
             <TextView
                 android:id="@+id/judul_buy_airtime"
@@ -199,6 +210,9 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
 <!--Footer-->
     <include
         android:id="@+id/bottom_view"
